@@ -1,0 +1,140 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  animation: fadeIn 4s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+nav {
+  font-size: 40px;
+  border-bottom: 1px black solid;
+}
+
+nav a:hover {
+  background: rgb(246, 196, 196);
+}
+
+#naslov {
+  text-align: center;
+  font-size: 50px;
+  padding-bottom: 50px;
+  font-style: italic;
+  animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+    color: red;
+  }
+  80% {
+    opacity: 0.5;
+    color: blue;
+  }
+}
+
+#text {
+  font-size: 30px;
+  text-align: justify;
+  padding: 0px 20px 0 20px;
+  border: 1px solid black;
+  margin-top: 100px;
+}
+
+.spinImage {
+  animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.container {
+  margin: 100px 0 100px 0;
+}
+
+footer {
+  text-align: center;
+  font-size: 70px;
+  border-top: 1px black solid;
+}
+
+#demonstration {
+  text-align: center;
+  font-size: 50px;
+  padding-top: 100px;
+}
+
+#wholeProduct {
+  font-size: 25px;
+  border: pink 5px solid;
+  width: 50%;
+  margin-bottom: 100px;
+}
+
+#wholeProduct h5 {
+  text-align: center;
+  color: red;
+  font-size: 40px;
+  font-style: italic;
+}
+
+#wholeProduct ul {
+  list-style-type: none;
+}
+
+#wholeProduct li {
+  text-align: center;
+}
+
+#wholeProduct #shipping {
+  text-align: center;
+}
+
+#wholeProduct button {
+  width: 30%;
+  background: pink;
+}
+
+#calculate {
+  text-align: center;
+  font-size: 30px;
+}
+
+#calculate button {
+  background: pink;
+}
+
+#calculate #konacniRez {
+  color: red;
+  font-size: 40px;
+}
+#forma {
+  margin-bottom: 100px;
+}
+
+#forma input {
+  width: 25%;
+  height: 40px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#ostalo img {
+  width: 300px;
+  height: 300px;
+}

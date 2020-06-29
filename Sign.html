@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Topla voda</title>
+    <link rel="stylesheet" type="text/css" href="stil.css" />
+    <script src="script1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1 id="naslov">Boiling Water</h1>
+    <nav class="nav nav-pills flex-column flex-sm-row">
+      <a class="flex-sm-fill text-sm-center nav-link" href="index.html">Home</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="demonstration.html"
+        >Demonstration</a
+      >
+      <a class="flex-sm-fill text-sm-center nav-link" href="Buy Product.html"
+        >Buy Product</a
+      >
+      <a
+        class="flex-sm-fill text-sm-center nav-link"
+        href="Sign.html"
+        style="background: pink;"
+        >Sign up for more</a
+      >
+    </nav>
+    <p style="text-align: center; font-size: 40px; padding-top: 50px;">
+      If you are interested in more, fill up this form
+    </p>
+
+    <form id="forma">
+      <div class="form-group">
+        <input
+          type="text"
+          id="username"
+          class="d-block form-control-lg"
+          placeholder="Enter username"
+          onmouseout="ime()"
+        />
+        <div id="error1"></div>
+        <br />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="email"
+          id="email"
+          class="d-block form-control-lg"
+          placeholder="Enter email"
+          onmouseout="mejl()"
+        />
+        <div id="error2"></div>
+      </div>
+
+      <br />
+      <div class="form-group">
+        <input
+          type="password"
+          id="pwd"
+          class="d-block form-control-lg"
+          placeholder="Enter password"
+          onmouseout="pswd()"
+        />
+        <div id="error3"></div>
+      </div>
+
+      <div class="form-group">
+        <br />
+        <input
+          type="password"
+          id="cpwd"
+          class="d-block form-control-lg"
+          placeholder="Confirm password"
+          onmouseout="pswd()"
+        />
+        <div id="error4"></div>
+      </div>
+
+      <br />
+      <input type="button" value="Click for more!" onclick="tnx()" />
+    </form>
+
+    <div style="visibility:hidden;" id="ostalo">
+      <p style="text-align: center; font-size: 40px; padding-top: 50px;">
+        Here are some other our products as well
+      </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <img
+              src="https://img.izismile.com/img/img13/20200421/640/its_just_annoying_how_useless_these_items_are_640_high_03.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-sm">
+            <img
+              src="https://www.demilked.com/magazine/wp-content/uploads/2017/09/59cde1ed2c0b8-cover_image_59cba30170e7b__700.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-sm">
+            <img
+              src="https://twistedsifter.files.wordpress.com/2014/08/useless-everyday-objects-and-items-by-katerina-kamprani-6.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; Darko $</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Topla voda</title>
+    <link rel="stylesheet" type="text/css" href="stil.css" />
+    <script src="script1.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1 id="naslov">Boiling Water</h1>
+    <nav class="nav nav-pills flex-column flex-sm-row">
+      <a class="flex-sm-fill text-sm-center nav-link" href="index.html">Home</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="demonstration.html"
+        >Demonstration</a
+      >
+      <a
+        class="flex-sm-fill text-sm-center nav-link"
+        href="Buy Product.html"
+        style="background: pink;"
+        >Buy Product</a
+      >
+      <a class="flex-sm-fill text-sm-center nav-link" href="Sign.html"
+        >Sign up for more</a
+      >
+    </nav>
+
+    <p style="text-align: center; font-size: 40px; padding-top: 50px;">
+      Buy whole product:
+    </p>
+
+    <div class="card mx-auto" id="wholeProduct">
+      <img
+        src="https://www.offgridweb.com/wp-content/uploads/2016/12/Boiling-water-purification-bacteria-virus-pathogen-1-1280x720.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">1l Boiled water</h5>
+        <p class="card-text"></p>
+        <ul>
+          <li>1l water (1e)</li>
+          <li>cooker (220e)</li>
+          <li>1min of electricity (heat) (0.01e)</li>
+          <li>pot (20e)</li>
+          <hr />
+          <li>Altogether: 241.01 e</li>
+        </ul>
+        <hr />
+
+        <div id="shipping">
+          <p>I want my product in <span id="brojac">0</span> days</p>
+          <button type="button" onclick="plus()">+</button>
+          <button type="button" onclick="minus()">-</button>
+        </div>
+        <hr />
+        <p style="color: red; padding-top: 40px; font-size: 30px;">
+          Warning! This water will cool down within 2min, and it will never be
+          hot as before!
+        </p>
+      </div>
+    </div>
+
+    <hr />
+    <p style="text-align: center; font-size: 40px; padding-top: 50px;">
+      Or buy each ingredient separately:
+    </p>
+
+    <div class="card-deck">
+      <div class="card" id="jedan">
+        <img
+          src="https://img.freepik.com/free-photo/glass-with-water_158104-8.jpg?size=626&ext=jpg"
+          class="card-img-top"
+          width="300"
+          height="300"
+          onmouseover="dodajBoju1()"
+          onmouseout="oduzmiBoju1()"
+        />
+        <div class="card-body">
+          <h5 class="card-title">1l of water</h5>
+          <p class="card-text">Price: 1e</p>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#exampleModal1"
+          >
+            Full picture
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal1"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Glass of water
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img
+                    src="https://img.freepik.com/free-photo/glass-with-water_158104-8.jpg?size=626&ext=jpg"
+                    class="card-img-top"
+                    alt="..."
+                    width="500"
+                    height="500"
+                  />
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="dva">
+        <img
+          src="https://azcd.harveynorman.com.au/media/catalog/product/s/m/smeg-900mm-classic-freestanding-cooker-anthracite-fs9608as.jpg"
+          class="card-img-top"
+          width="300"
+          height="300"
+          onmouseover="dodajBoju2()"
+          onmouseout="oduzmiBoju2()"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Cooker</h5>
+          <p class="card-text">Price: 220e</p>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#exampleModal2"
+          >
+            Full picture
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal2"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Cooker</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img
+                    src="https://azcd.harveynorman.com.au/media/catalog/product/s/m/smeg-900mm-classic-freestanding-cooker-anthracite-fs9608as.jpg"
+                    class="card-img-top"
+                    alt="..."
+                    width="500"
+                    height="500"
+                  />
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="tri">
+        <img
+          src="https://europeanenergyretailers.eu/eenergy/uploads/2017/05/energia-rinnovabile.jpg"
+          class="card-img-top"
+          alt="..."
+          width="300"
+          height="300"
+          onmouseover="dodajBoju3()"
+          onmouseout="oduzmiBoju3()"
+        />
+        <div class="card-body">
+          <h5 class="card-title">1min of electricity</h5>
+          <p class="card-text">Price: 0.01e</p>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#exampleModal3"
+          >
+            Full picture
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal3"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Electricity
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img
+                    src="https://europeanenergyretailers.eu/eenergy/uploads/2017/05/energia-rinnovabile.jpg"
+                    class="card-img-top"
+                    width="500"
+                    height="500"
+                  />
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="cetiri">
+        <img
+          src="https://www.ikea.com/kr/en/images/products/ikea-365--pot-with-lid__0710324_PE727468_S5.JPG"
+          class="card-img-top"
+          alt="..."
+          width="300"
+          height="300"
+          onmouseover="dodajBoju4()"
+          onmouseout="oduzmiBoju4()"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Pot</h5>
+          <p class="card-text">Price: 20e</p>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          >
+            Full picture
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Pot</h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img
+                    src="https://www.ikea.com/kr/en/images/products/ikea-365--pot-with-lid__0710324_PE727468_S5.JPG"
+                    width="400"
+                    height="400"
+                  />
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <p
+      style="text-align: center; font-size: 40px; padding-top: 50px; margin-top: 100px;"
+    >
+      Calculate cost of your own custom product:
+    </p>
+    <div id="calculate">
+      <input
+        id="water"
+        placeholder="Water"
+        type="number"
+        class="rez"
+        onkeyup="w2e()"
+      />
+      liter (water)
+      <p id="costW">euro</p>
+      <input
+        id="energy"
+        placeholder="Energy"
+        type="number"
+        class="rez"
+        onkeyup="e2w()"
+      />
+      min (energy)
+      <p id="costE">euro</p>
+
+      <div id="triElementa">
+        <select id="cooker">
+          <option value="0">I don't want cooker</option>
+          <option value="220">Cooker (220e)</option>
+        </select>
+
+        <select id="pot">
+          <option value="0">I don't want pot</option>
+          <option value="20">Pot (20e)</option>
+        </select>
+
+        <button id="izracunaj" onclick="izracunaj()">Calculate</button>
+        <p id="konacniRez"></p>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; Darko $</p>
+    </footer>
+
+    <script>
+      let brojac = document.getElementById("brojac");
+      let count = 0;
+
+      function plus() {
+        count++;
+        brojac.innerHTML = count;
+      }
+
+      function minus() {
+        count--;
+        brojac.innerHTML = count;
+      }
+    </script>
+  </body>
+</html>
